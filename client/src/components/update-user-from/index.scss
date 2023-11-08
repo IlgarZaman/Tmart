@@ -1,0 +1,28 @@
+#updateUserForm {
+    background-color: white;
+    height: 700px;
+  
+    .gridClass {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .redError{
+        color: red;
+        font-size: 13px;
+      }
+    }
+    .centerLoginDiv {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .boxButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

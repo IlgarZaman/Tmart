@@ -1,0 +1,431 @@
+#fifthSection {
+  background-color: white;
+  padding-top: 120px;
+  .container {
+    .mainDiv {
+      width: 100%;
+      display: flex;
+      column-gap: 30px;
+      .jwMenu {
+        width: 25%;
+        .header {
+          h3 {
+            border-left: 1px solid rgba(129, 129, 129, 0.2);
+            border-right: 1px solid rgba(129, 129, 129, 0.2);
+            border-top: 2px solid #ff4136;
+            color: #303030;
+            font-size: 17px;
+            font-weight: 500;
+            padding: 15px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
+          }
+        }
+        .body {
+          background: #ffffff none repeat scroll 0 0;
+          border: 1px solid rgba(129, 129, 129, 0.2);
+          padding: 20px 0;
+          width: 100%;
+          ul {
+            li {
+              a {
+                background-color: #fff;
+                color: #333;
+                display: block;
+                font-size: 14px;
+                letter-spacing: 0.4px;
+                padding: 7px 20px;
+                text-transform: capitalize;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                  color: #ff4136;
+                }
+              }
+            }
+          }
+        }
+      }
+      .productsType {
+        width: 75%;
+        .header {
+          border-color: #ff4136 rgba(129, 129, 129, 0.2)
+            rgba(129, 129, 129, 0.2);
+          border-style: solid;
+          border-width: 2px 1px 1px;
+          padding: 15px 20px;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              a {
+                .tab-menu-text {
+                  h4 {
+                    color: #303030;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 0 30px 0 0;
+                    position: relative;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                      color: #ff4136;
+                    }
+                  }
+                  .active {
+                    color: #ff4136 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .body {
+          margin-top: 30px;
+          .productDiv {
+            height: 400px;
+            width: 100%;
+            .productPicture {
+              cursor: grab;
+              width: 100%;
+              height: 60%;
+              position: relative;
+              .hoverMenu {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                left: 50%;
+                position: absolute;
+                text-align: center;
+                top: 60%;
+                transform: translateY(-50%) translateX(-50%);
+                width: 100%;
+                z-index: 2;
+                opacity: 0;
+                transition: 0.6s;
+                .icons {
+                  width: 50%;
+                  background: #fff none repeat scroll 0 0;
+                  opacity: 0.85;
+                  ul {
+                    display: flex;
+                    align-items: center;
+                    height: 48px;
+                    justify-content: space-around;
+                    line-height: 48px;
+                    margin: auto;
+                    width: 100%;
+                    .line {
+                      width: 1px;
+                      opacity: 0.85;
+                    }
+                    .ti-heart-broken {
+                      color: #ff4136;
+                    }
+                    .icon {
+                      transition: all 0.3s ease 0s;
+                      &:hover {
+                        color: #ff4136;
+                      }
+                    }
+                  }
+                }
+              }
+              &:hover .hoverMenu {
+                opacity: 1;
+                top: 50%;
+              }
+            }
+            .productTitle {
+              margin-top: 30px;
+              p {
+                font-size: 15px;
+                font-weight: 500;
+                transition: all 0.3s ease-out 0s;
+                &:hover {
+                  color: #ff4136;
+                  cursor: pointer;
+                }
+              }
+              .discountedPrice {
+                margin-top: 9px;
+                .oldPrice {
+                  color: #9c9b9b;
+                  text-decoration: line-through;
+                  font-size: 16px;
+                }
+                .oldPriceColor {
+                  font-size: 16px;
+                  color: #ff4136;
+                }
+                .newPrice {
+                  padding-left: 12px;
+                  color: #ff4136;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 55;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-in-out;
+          }
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+          .modal-content {
+            width: 60%;
+            height: 80%;
+            background-color: white;
+            padding: 8px 20px 20px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            overflow: auto;
+            .closeDiv {
+              width: 100%;
+              border-bottom: 1px solid #9c9b9b4d;
+              display: flex;
+              justify-content: end;
+              span {
+                font-size: 24px;
+                font-weight: 400;
+                cursor: pointer;
+              }
+            }
+            .mainContentDiv {
+              display: flex;
+              margin-top: 20px;
+              column-gap: 20px;
+              .imageDiv {
+                width: 50%;
+                height: 100%;
+                img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              .textDiv {
+                width: 50%;
+                h1 {
+                  font-size: 20px;
+                  font-weight: 400;
+                  text-transform: capitalize;
+                  color: #303030;
+                  line-height: 1.1;
+                  margin-bottom: 15px;
+                }
+                .discountedPrice {
+                  margin-top: 9px;
+                  .oldPrice {
+                    color: #9c9b9b;
+                    text-decoration: line-through;
+                    font-size: 16px;
+                  }
+                  .oldPriceColor {
+                    font-size: 24px;
+                    color: #ff4136;
+                  }
+                  .newPrice {
+                    font-size: 23px;
+                    color: #ff4136;
+                    line-height: 24px;
+                  }
+                  ::after {
+                    content: " ";
+                  }
+                }
+                p {
+                  color: #999;
+                }
+                .selectDivNone {
+                  display: none;
+                }
+                .selectDiv {
+                  label {
+                    font-size: 14px;
+                  }
+                  .select {
+                    border-radius: 0;
+                    height: 35px;
+                    padding: 7px;
+                    width: 50%;
+                    border: 1px solid #e5e5e5;
+                    option {
+                      color: #000;
+                      background-color: #fff;
+                      padding: 0 10px;
+                    }
+                  }
+                }
+                .quantity {
+                  display: flex;
+                  align-items: center;
+                  p {
+                    color: #000;
+                  }
+                  .quantityButton {
+                    font-size: 20px;
+                    cursor: pointer;
+                  }
+                }
+                .addToCartBtn {
+                  button {
+                    background: #333333 none repeat scroll 0 0;
+                    color: #fff;
+                    font-size: 20px;
+                    height: 60px;
+                    line-height: 60px;
+                    width: 90%;
+                    text-transform: capitalize;
+                    transition: all 0.5s ease 0s;
+                    border: none;
+                    &:hover {
+                      background-color: #ff4136;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #fifthSection {
+    .container {
+      .mainDiv {
+        width: 100%;
+        display: block;
+        .jwMenu {
+          width: 100%;
+        }
+        .productsType {
+          margin-top: 60px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #fifthSection {
+    .container {
+      .mainDiv {
+        width: 100%;
+        display: block;
+        .jwMenu {
+          width: 100%;
+        }
+        .productsType {
+          margin-top: 60px;
+          width: 100%;
+          img {
+            object-fit: cover;
+          }
+          .body {
+            margin-top: 30px;
+            .productDiv {
+              height: 600px;
+              width: 100%;
+              .productPicture {
+                cursor: grab;
+                width: 100%;
+                height: 60%;
+                position: static;
+                .hoverMenu {
+                  position: static;
+                  transform: none;
+                  opacity: 1;
+                  cursor: none;
+                  .icons {
+                    width: 50%;
+                    background: none;
+                    opacity: 1;
+                    ul {
+                      display: flex;
+                      align-items: center;
+                      height: 48px;
+                      justify-content: space-around;
+                      line-height: 48px;
+                      margin: 0;
+                      width: 100%;
+                      .line {
+                        width: 1px;
+                        opacity: 0.85;
+                      }
+                      .icon {
+                        color: #333;
+                        &:hover {
+                          color: #333;
+                        }
+                      }
+                    }
+                  }
+                }
+                &:hover .hoverMenu {
+                  opacity: 1;
+                  top: 50%;
+                }
+              }
+              .productTitle {
+                margin-top: 40px;
+                  p {
+                    &:hover {
+                      cursor: none;
+                    }
+                  }
+              }
+            }
+            .modal-content {
+              width: 70%;
+              height: 80%;
+              .closeDiv {
+                width: 100%;
+                border-bottom: 1px solid #9c9b9b4d;
+                display: flex;
+                justify-content: end;
+                span {
+                  font-size: 24px;
+                  font-weight: 400;
+                  cursor: pointer;
+                }
+              }
+              .mainContentDiv {
+                display: block;
+                .imageDiv {
+                  width: 100%;
+                  height: 100%;
+                  img {
+                    height: 100%;
+                    width: 100%;
+                  }
+                }
+                .textDiv {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

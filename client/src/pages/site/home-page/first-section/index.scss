@@ -1,0 +1,179 @@
+#firstSection {
+  .homeFirstSectionText {
+    display: none;
+  }
+  .swiper {
+    z-index: 0;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 100%;
+        .sliderInner {
+          h1 {
+            opacity: 0;
+            transform: translateY(40%);
+            font-size: 60px;
+            font-weight: 500;
+            text-align: center;
+            text-transform: capitalize;
+            font-variant-ligatures: common-ligatures;
+          }
+          .sliderBtn {
+            transform: translateY(40%);
+            opacity: 0;
+            a {
+              color: #000;
+              font-family: Dosis;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 30px;
+            }
+            &::before {
+              opacity: 0;
+              transform: translateY(40%);
+              background: #000 none repeat scroll 0 0;
+              content: "";
+              height: 1px;
+              position: absolute;
+              right: 41%;
+              top: 50%;
+              transition: all 0.3s ease 0s;
+              width: 20px;
+            }
+          }
+        }
+      }
+      .swiper-slide-active {
+        .sliderInner {
+          h1 {
+            transition: all 1s ease-in-out 1.2s;
+            font-size: 60px;
+            font-weight: 500;
+            text-align: center;
+            text-transform: capitalize;
+            font-variant-ligatures: common-ligatures;
+            opacity: 1;
+            transform: translateY(0);
+            span {
+              color: #ff4136;
+            }
+          }
+          .sliderBtn {
+            position: relative;
+            transition: all 1s ease-in-out 2s;
+            transform: translateY(0);
+            opacity: 1;
+            a {
+              transition: all 0.3s ease 0s;
+              color: #000;
+              font-family: Dosis;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 30px;
+              text-transform: uppercase;
+              &::before {
+                opacity: 1;
+                transform: translateY(0);
+                background: #000 none repeat scroll 0 0;
+                content: "";
+                height: 1px;
+                position: absolute;
+                right: 41%;
+                top: 50%;
+                width: 20px;
+              }
+              &:hover {
+                transition: all 0.3s;
+                color: #ff4136;
+              }
+              &:hover::before {
+                background: #ff4136 none repeat scroll 0 0;
+              }
+            }
+          }
+        }
+        .firstSlider {
+          margin-left: 30%;
+          margin-bottom: 5%;
+        }
+        .secondSlider {
+          margin-right: 30%;
+          margin-bottom: 5%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #firstSection {
+    padding-top: 10px;
+    .homeFirstSectionText {
+      display: none;
+    }
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          // background-size: contain !important;
+          background-repeat: no-repeat;
+          background-position: center center !important;
+          height: 550px !important;
+          background-size: cover !important;
+          .sliderInner {
+            h1 {
+              font-size: 40px;
+            }
+            .sliderBtn {
+              a {
+                font-size: 13px;
+                &::before {
+                  right: 180px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #firstSection {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7f7f7;
+    .swiper {
+      padding-top: 90px;
+      .swiper-wrapper {
+        .swiper-slide {
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          background-position: center center !important;
+          height: 300px !important;
+          background-size: cover !important;
+          .sliderInner {
+            h1 {
+              font-size: 25px;
+            }
+            .sliderBtn {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              a {
+                font-size: 13px;
+                &::before {
+                  right: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

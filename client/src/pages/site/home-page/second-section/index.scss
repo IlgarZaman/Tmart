@@ -1,0 +1,110 @@
+#secondSection {
+  padding: 120px 0;
+  background-color: white;
+  .container {
+    .mainDiv {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 50px;
+      .productCollection,
+      .basketCollection {
+        width: 100%;
+        height: 270px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        .textDiv {
+          width: 100%;
+          margin-left: 30px;
+          h2 {
+            font-size: 22px;
+            text-transform: capitalize;
+            color: #303030;
+            font-weight: 400;
+            transition: all 0.3s ease-out 0s;
+            &:hover {
+              color: #ff4136;
+            }
+          }
+          .shopNowBtn {
+            color: #3a3a3a;
+            font-family: Dosis;
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 30px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+            &::before {
+              background: #000 none repeat scroll 0 0;
+              content: "";
+              height: 1px;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transition: all 0.5s ease 0s;
+              width: 20px;
+            }
+            &:hover {
+              color: #ff4136;
+            }
+            &:hover::before {
+              background: #ff4136 none repeat scroll 0 0;
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #secondSection {
+    .container {
+      .mainDiv {
+        flex-direction: column;
+        gap: 50px 0;
+        width: 100%;
+        .productCollection,
+        .basketCollection {
+          background-size: cover;
+          width: 100%;
+          height: 350px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #secondSection {
+    .container {
+      display: flex;
+      justify-content: center;
+      .mainDiv {
+        flex-direction: column;
+        gap: 50px 0;
+        width: 100%;
+        .productCollection,
+        .basketCollection {
+          background-size: cover;
+          width: 100%;
+          height: 230px;
+          align-items: center;
+          .textDiv {
+            width: 55%;
+            h2 {
+              font-size: 18px;
+            }
+            .shopNowBtn {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: -2;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+#root {
+  position: relative;
+  z-index: -3;
+}
+::selection {
+  color: white;
+  background: #ff4136;
+  text-shadow: none;
+}
+.css-sox5kk-MuiBackdrop-root {
+  opacity: 0 !important;
+}

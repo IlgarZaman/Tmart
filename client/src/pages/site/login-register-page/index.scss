@@ -1,0 +1,82 @@
+#loginRegister {
+  padding-top: 100px;
+  .mainDiv {
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .centerDiv {
+      text-align: center;
+      .account {
+        h2 {
+          color: #343434;
+          font-size: 36px;
+          font-weight: 400;
+        }
+      }
+      .mavigationList {
+        a {
+          color: #343434;
+          font-size: 18px;
+        }
+        span {
+          color: #343434;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .login-register-name {
+    padding-bottom: 60px;
+    height: 230px;
+    width: 100%;
+    background-color: white;
+    .controle {
+      height: 100%;
+      display: flex;
+      column-gap: 30px;
+      justify-content: center;
+      align-items: flex-end;
+      .login {
+        a {
+          color: #ff4136;
+          font-size: 36px;
+          transition: all 0.4s ease 0s;
+          cursor: pointer;
+        }
+      }
+      .noLogin {
+        a {
+          color: #000;
+          font-size: 36px;
+          transition: all 0.4s ease 0s;
+          cursor: pointer;
+          &:hover {
+            color: #ff4136;
+          }
+        }
+      }
+      .noRegister {
+        a {
+          color: #000;
+          font-size: 36px;
+          transition: all 0.4s ease 0s;
+          cursor: pointer;
+          &:hover {
+            color: #ff4136;
+          }
+        }
+      }
+      .register {
+        a {
+          color: #ff4136;
+          font-size: 36px;
+          transition: all 0.4s ease 0s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

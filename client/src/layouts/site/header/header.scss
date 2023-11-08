@@ -1,0 +1,463 @@
+#SiteHeader,
+#scrolSiteHeader {
+  height: 90px;
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  .mainDiv {
+    .mainHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .mobileCenter {
+        display: none;
+      }
+      .mobileLeft {
+        display: none !important;
+      }
+      .center {
+        a {
+          color: rgb(102, 102, 102);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 40px;
+          transition: all 0.3s;
+        }
+        ul {
+          display: flex;
+          column-gap: 40px;
+          .navMenu {
+            color: rgb(102, 102, 102);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 40px;
+            transition: all 0.3s;
+            &:hover {
+              color: #ff4136;
+            }
+            .dropdown {
+              cursor: pointer;
+              position: relative;
+              z-index: 1;
+              height: 50px;
+              .dropdownMenu {
+                cursor: auto;
+                padding: 20px;
+                display: flex;
+                background-color: #fff;
+                text-transform: uppercase;
+                position: absolute;
+                left: -170px;
+                opacity: 0;
+                text-align: left;
+                top: 70px;
+                visibility: hidden;
+                z-index: -1;
+                box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+                .forMan,
+                .forWoman,
+                .other {
+                  width: 200px;
+                  .header {
+                    a {
+                      color: black;
+                      margin-left: 30px;
+                      font-size: 18px;
+                      border-bottom: 1px solid black;
+                      &:hover {
+                        color: #ff4136;
+                      }
+                    }
+                  }
+                  .body {
+                    ul {
+                      display: flex;
+                      flex-direction: column;
+                      margin-left: 30px;
+                      li {
+                        a {
+                          color: #333;
+                          display: block;
+                          font-size: 12px;
+                          font-weight: 400;
+                          text-decoration: none;
+                          text-transform: uppercase;
+                          transition: all 0.3s ease 0s;
+                          &:hover {
+                            color: #ff4136;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .dropdown-menu {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                text-transform: uppercase;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                text-align: left;
+                top: 70px;
+                visibility: hidden;
+                z-index: -1;
+                box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+              }
+
+              .dropdown-menu li {
+                width: 150px;
+                a {
+                  margin-left: 10px;
+                  font-weight: 400;
+                  line-height: 10px;
+                  font-size: 12px;
+                  color: #000;
+                  display: inline-block;
+                  width: 100%;
+                  text-decoration: none;
+                  -webkit-transition: all 0.2s;
+                  transition: all 0.4s;
+                }
+                &:hover {
+                  transition: all 0.4s;
+
+                  background-color: #f7f7f7;
+                  a {
+                    color: #ff4136;
+                  }
+                }
+              }
+              &:hover {
+                .dropdown-menu {
+                  opacity: 1;
+                  visibility: visible;
+                  top: 100%;
+                  transition: all 0.5s, background 2s 0.5s linear;
+                }
+                .dropdownMenu {
+                  opacity: 1;
+                  visibility: visible;
+                  top: 100%;
+                  transition: all 0.5s, background 2s 0.5s linear;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right {
+        display: flex;
+        column-gap: 20px;
+        a {
+          .logo {
+            size: 16px;
+            color: #666;
+            font-size: 19px;
+            line-height: 30px;
+            transition: all 0.3s ease 0s;
+            &:hover {
+              color: #ff4136;
+            }
+          }
+          .profilImg {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+        }
+        .shopLogo {
+          position: relative;
+          .shopCount {
+            position: absolute;
+            left: 20px;
+            bottom: 25px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #ff4136;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f7f7f7;
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mainDiv,
+  .nonemainDiv {
+    .tabletMode,
+    .tabletsMainDiv {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+  }
+  .mobileModNone,
+  .mobileMod {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #SiteHeader,
+  #scrolSiteHeader {
+    background: rgba(246, 246, 248, 0.9);
+    height: 100px;
+    .mainDiv {
+      .tabletMode,
+      .tabletsMainDiv {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      .mainHeader {
+        .center {
+          display: none;
+        }
+      }
+      .noneMenuTablets {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .menuTablets {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .menuTablets,
+      .noneMenuTablets {
+        position: absolute;
+        right: 0;
+        top: 90px;
+        z-index: 1;
+        width: 50%;
+        background: rgba(246, 246, 248, 0.9);
+        .tabletsMainDiv {
+          width: 100%;
+          margin: 40px 0 0 20px;
+          .eachTabletMode {
+            .menu1 {
+              margin-bottom: 20px;
+              .functionBtn {
+                display: flex;
+                align-items: center;
+                .spanDiv {
+                  height: 20px;
+                  width: 20px;
+                  text-align: center;
+                  display: flex;
+                  align-items: center;
+                  .spanRed {
+                    color: #ef3e42;
+                    font-weight: 500;
+                    font-size: 32px;
+                  }
+                  .spanBlack {
+                    color: black;
+                    font-weight: 500;
+                    font-size: 32px;
+                  }
+                }
+                button {
+                  margin-left: 20px;
+                  background: rgba(246, 246, 248, 0.9);
+                  border: none;
+                  font-weight: 700;
+                  color: #2e3131;
+                  text-transform: uppercase;
+                  a {
+                    text-transform: uppercase;
+                    color: black;
+                  }
+                }
+              }
+              .menu1MainDiv {
+                margin-left: 40px;
+                .menu1AreaNone {
+                  overflow: hidden;
+                  height: 0;
+                  transition: opacity 0.3s ease-in-out;
+                  opacity: 0;
+                }
+                .menu1Area {
+                  transition: opacity 0.3s ease-in-out;
+                  height: auto;
+                  opacity: 1;
+                }
+                .shopArea {
+                  display: flex;
+                  flex-wrap: wrap;
+                  column-gap: 10%;
+                }
+
+                .menu1Area,
+                .menu1AreaNone {
+                  div {
+                    ul {
+                      .navMenu {
+                        a {
+                          .dark {
+                            border-bottom: 1px solid black;
+                            font-weight: 600;
+                            color: black;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                          }
+                          .simple {
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            color: rgba(0, 0, 0, 0.7);
+                          }
+                        }
+                        margin-top: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobileModNone,
+    .mobileMod {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #SiteHeader,
+  #scrolSiteHeader {
+    overflow-y: hidden;
+    padding: 20px 0;
+    background: rgba(246, 246, 248, 0.9);
+    .mainDiv {
+      .mainHeader {
+        .mobileCenter {
+          display: block;
+        }
+        .mobileLeft {
+          display: block !important;
+        }
+        .center {
+          display: none;
+        }
+        .left {
+          display: none;
+        }
+      }
+    }
+    .mobileModNone {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .mobileMod {
+      visibility: visible;
+      opacity: 1;
+      position: absolute;
+      z-index: 5;
+      height: 100%;
+      width: 100%;
+      overflow-y: hidden;
+      background-color: #f7f7f7;
+      top: 87px;
+      position: fixed;
+      .wishlist {
+        font-size: 35px;
+        color: #000;
+      }
+      .eachMobileMode {
+        margin-left: 10px;
+        .menu1 {
+          margin-bottom: 20px;
+          .functionBtn {
+            display: flex;
+            align-items: center;
+            .spanDiv {
+              height: 20px;
+              width: 20px;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              .spanRed {
+                color: #ef3e42;
+                font-weight: 500;
+                font-size: 32px;
+              }
+              .spanBlack {
+                color: black;
+                font-weight: 500;
+                font-size: 32px;
+              }
+            }
+            button {
+              margin-left: 20px;
+              background-color: #f7f7f7;
+              border: none;
+              font-weight: 700;
+              color: #2e3131;
+              text-transform: uppercase;
+              a {
+                text-transform: uppercase;
+                color: black;
+              }
+            }
+          }
+          .menu1MainDiv {
+            margin-left: 40px;
+            .menu1AreaNone {
+              overflow: hidden;
+              height: 0;
+              transition: opacity 0.3s ease-in-out;
+              opacity: 0;
+            }
+            .menu1Area {
+              transition: opacity 0.3s ease-in-out;
+              height: auto;
+              opacity: 1;
+            }
+            .shopArea {
+              display: flex;
+              flex-wrap: wrap;
+              column-gap: 10%;
+            }
+            .menu1Area {
+              div {
+                ul {
+                  .navMenu {
+                    a {
+                      .dark {
+                        border-bottom: 1px solid black;
+                        font-weight: 600;
+                        color: black;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                      }
+                      .simple {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        color: rgba(0, 0, 0, 0.878);
+                      }
+                    }
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

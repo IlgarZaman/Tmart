@@ -1,0 +1,264 @@
+#account {
+  .mainDiv {
+    background-color: #f6f6f6;
+    padding-top: 100px;
+    .centerDiv {
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 320px;
+        color: #303030;
+        h2 {
+          color: #343434;
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 40px;
+          text-transform: capitalize;
+        }
+        .link-title {
+          margin-top: 20px;
+          a {
+            font-size: 18px;
+            color: #343434;
+          }
+          span {
+            font-size: 18px;
+            color: #343434;
+          }
+        }
+      }
+      .account-section {
+        background-color: white;
+        height: 400px;
+        position: relative;
+        .image-section {
+          top: -20%;
+          width: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          .avatar-upload {
+            position: relative;
+            width: 205px;
+            margin: 50px auto;
+            .avatar-edit {
+              position: absolute;
+              right: 12px;
+              z-index: 1;
+              top: 10px;
+              input {
+                display: none;
+                + label {
+                  display: inline-block;
+                  width: 34px;
+                  height: 34px;
+                  margin-bottom: 0;
+                  border-radius: 100%;
+                  background: #ffffff;
+                  border: 1px solid transparent;
+                  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                  cursor: pointer;
+                  font-weight: normal;
+                  transition: all 0.2s ease-in-out;
+                  &:hover {
+                    background: #f1f1f1;
+                    border-color: #d6d6d6;
+                  }
+                  &:after {
+                    content: "\f040";
+                    font-family: "FontAwesome";
+                    color: #757575;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: auto;
+                  }
+                }
+              }
+            }
+            .avatar-preview {
+              .confirmBtn {
+                position: absolute;
+                bottom: -50px;
+                left: 25px;
+              }
+              width: 192px;
+              height: 192px;
+              position: relative;
+              border-radius: 100%;
+              border: 6px solid #f8f8f8;
+              box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+              > div {
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+          .image-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 155px;
+            border-radius: 50%;
+            width: 155px;
+            background: linear-gradient(to top, #d1d1d1 50%, #a3a3a3 50%);
+            background-size: cover;
+            img {
+              border-radius: 50%;
+              width: 140px;
+              height: 140px;
+            }
+          }
+        }
+        .container {
+          .account-header {
+            padding-top: 100px;
+            .text-section {
+              display: flex;
+              justify-content: space-between;
+              h1 {
+                font-size: 30px;
+                font-weight: 400;
+                color: #303030;
+                line-height: 1.1;
+              }
+            }
+            .hr-small {
+              border-color: #e6e6e6;
+              margin: 15px 0;
+              border-top: 1px solid #eee;
+            }
+          }
+          .account-body {
+            h2 {
+              margin-bottom: 10px;
+              font-size: 18px;
+              font-weight: 400;
+            }
+            margin: 20px 0;
+          }
+          .name,
+          .surname,
+          .email,
+          .type {
+            h2 {
+              margin-bottom: 10px;
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+          .dashboardActiveForSuperAdmin {
+            display: block;
+          }
+          .dashboardActiveForAdmin {
+            display: block;
+          }
+          .dashboardNone {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #account {
+    .mainDiv {
+      .centerDiv {
+        .title {
+          h2 {
+            color: #343434;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 40px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #account {
+    .mainDiv {
+      .centerDiv {
+        .title {
+          h2 {
+            font-size: 24px;
+          }
+          .link-title {
+            a {
+              font-size: 14px;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+        .account-section {
+          .image-section {
+            top: -20%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            .avatar-upload {
+              width: 205px;
+
+              .avatar-preview {
+                width: 140px;
+                height: 140px;
+                .confirmBtn {
+                  position: absolute;
+                  bottom: -50px;
+                  left: 5px;
+                }
+              }
+            }
+            .image-center {
+              height: 140px;
+              width: 140px;
+            }
+          }
+          .container {
+            .account-header {
+              .text-section {
+                margin-top: 50px;
+                h1 {
+                  font-size: 20px;
+                  font-weight: 400;
+                  color: #303030;
+                  line-height: 1.1;
+                }
+              }
+            }
+            .account-body {
+              h2 {
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              margin: 20px 0;
+            }
+            .name,
+            .surname,
+            .email,
+            .type {
+              h2 {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,549 @@
+#basketpage {
+  padding: 100px 0;
+  height: 100%;
+  background-color: white;
+  .container {
+    .shopBtnMobile {
+      display: none;
+    }
+    .ifEmptyBasket {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .emptydiv {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        animation: bounce 2s infinite;
+        background-image: url("../../../assets/empty-box.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .message {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+    .startShoppingDiv {
+      margin-top: 50px;
+      width: 100%;
+      height: 90px;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .heartIconDiv {
+        width: 60px;
+        height: 60px;
+        background-color: #f7f8fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        .heartIcon {
+          @keyframes colorChange {
+            0%,
+            100% {
+              color: black;
+            }
+            50% {
+              color: #ff4136;
+            }
+          }
+          animation: colorChange 3s infinite;
+          font-size: 40px;
+        }
+      }
+      p {
+        margin-left: 9%;
+        color: #333;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .shopBtn {
+        color: #ff4136;
+        padding: 10px 20px;
+        &.MuiButton-outlined {
+          border-color: #bbb8b8;
+          &:hover {
+            border-color: #ff4136;
+          }
+
+          &.Mui-focused {
+            border-color: #ff4136;
+          }
+        }
+      }
+    }
+  }
+  .headerForBasket {
+    background-color: #f6f6f6;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      h2 {
+        color: #343434;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+      }
+      .link-title {
+        margin-top: 20px;
+        text-align: center;
+        a {
+          font-size: 18px;
+          color: #343434;
+        }
+        span {
+          font-size: 18px;
+          color: #343434;
+        }
+      }
+    }
+  }
+  .bodyForMobile {
+    display: none;
+  }
+  .popUpClearBasket {
+    padding: 100px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      color: #343434;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 40px;
+    }
+  }
+  .bodyForBasket {
+    padding: 0 0 100px 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      .mainBasketDiv {
+        display: flex;
+        width: 100%;
+        box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 15px;
+        .imgDiv {
+          width: 15%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .textDiv {
+          width: 100%;
+          margin-left: 30px;
+          display: flex;
+          align-items: center;
+          .leftSection {
+            width: 50%;
+            .mainName {
+              .name {
+                margin-bottom: 10px;
+                p {
+                  font-size: 18px;
+                  font-size: 400;
+                }
+              }
+              .css-1869usk-MuiFormControl-root {
+                margin: 8px 0;
+              }
+              .formcontrol {
+                display: flex;
+                column-gap: 20px;
+              }
+            }
+          }
+          .centerAndRightSection {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            .centerSection {
+              width: 20%;
+              display: flex;
+              align-items: center;
+              .button {
+                display: flex;
+                align-items: center;
+                p {
+                  border-bottom: 1px solid #8e8c8c;
+                  border-top: 1px solid #8e8c8c;
+                  width: 20px;
+                  text-align: center;
+                }
+              }
+            }
+            .rightSection {
+              width: 30%;
+              display: flex;
+              column-gap: 20px;
+              align-items: center;
+              justify-content: center;
+              .deleteBtn {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: initial;
+              }
+            }
+          }
+        }
+      }
+      .totalPrice {
+        .priceText {
+          display: flex;
+          column-gap: 10px;
+        }
+        .sendmailbutton {
+          margin-top: 10px;
+          width: 100%;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #basketpage {
+    .headerForBasket {
+      .container {
+        h2 {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        .link-title {
+          a {
+            font-size: 16px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .bodyForMobile {
+      display: none;
+    }
+    .bodyForBasket {
+      padding: 60px 0;
+      .container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        .mainBasketDiv {
+          .imgDiv {
+            width: 30%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .textDiv {
+            width: 100%;
+            margin-left: 30px;
+            display: block;
+            align-items: center;
+            .leftSection {
+              .mainName {
+                display: block;
+                width: 100px;
+                .name {
+                  margin-bottom: 10px;
+                  p {
+                    width: 300px;
+                    font-size: 18px;
+                    font-size: 400;
+                  }
+                }
+                .MuiFormControl-root {
+                  width: 100px;
+                }
+                .css-1869usk-MuiFormControl-root {
+                  margin: 8px 0;
+                  min-width: 100%;
+                }
+                .formcontrol {
+                  display: flex;
+                  .selectBasket {
+                    width: 100px;
+                    height: 50px;
+                  }
+                }
+              }
+            }
+            .centerAndRightSection {
+              display: block;
+              .centerSection {
+                width: 20%;
+                display: flex;
+                align-items: center;
+                .button {
+                  display: flex;
+                  align-items: center;
+                  .quantityButton {
+                    min-width: 30px;
+                    height: 30px;
+                  }
+                  p {
+                    border-bottom: 1px solid #8e8c8c;
+                    border-top: 1px solid #8e8c8c;
+                    width: 20px;
+                    text-align: center;
+                  }
+                }
+              }
+              .rightSection {
+                width: 100%;
+                margin-top: 10px;
+                display: flex;
+                column-gap: 20px;
+                align-items: initial;
+                justify-content: initial;
+                .deleteBtn {
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #basketpage {
+    padding: 100px 0 50px 0;
+    .container {
+      .ifEmptyBasket {
+        padding-top: 0px;
+        .emptyBox {
+          display: none;
+          width: 150px;
+          height: 150px;
+        }
+      }
+      .startShoppingMainDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .startShoppingDiv {
+          width: 80%;
+          margin-top: 50px;
+          height: 90px;
+          background-color: #ffffff;
+          border: 1px solid #e0e0e0;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: initial;
+          .heartIconDiv {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .heartIcon {
+              font-size: 24px;
+            }
+          }
+          p {
+            font-size: 10px;
+            font-weight: 600;
+          }
+        }
+        .shopBtn {
+          display: none;
+        }
+      }
+      .shopBtnMobDiv {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .shopBtnMobile {
+          display: block;
+          color: #ff4136;
+          &.MuiButton-outlined {
+            width: 80%;
+            border: 2px solid #343434;
+            border-color: #bbb8b8;
+            font-size: 10px;
+            &:hover {
+              border-color: #ff4136;
+            }
+
+            &.Mui-focused {
+              border-color: #ff4136;
+            }
+          }
+        }
+      }
+    }
+    .headerForBasket {
+      .container {
+        h2 {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        .link-title {
+          a {
+            font-size: 16px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .bodyForBasket {
+      display: none;
+    }
+    .popUpClearBasket {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      h2 {
+        color: #343434;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 40px;
+      }
+      .clearBtn {
+        width: 100%;
+        font-size: 10px;
+      }
+    }
+    .bodyForMobile {
+      display: block;
+      .container {
+        .mainBasketDiv {
+          position: relative;
+          margin: 0 0 20px 0;
+          box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 2px -2px 25px -12px rgba(0, 0, 0, 0.4);
+          border-radius: 10px;
+          padding: 15px;
+          display: flex;
+          height: 130px;
+          .imgDiv {
+            display: flex;
+            width: 20%;
+            img {
+              width: 100%;
+              aspect-ratio: 3/1;
+              object-fit: contain;
+            }
+          }
+          .mainTextDiv {
+            margin-left: 10px;
+            .textDiv {
+              .leftSection {
+                .formcontrolcss {
+                  margin: 8px 0;
+                  min-width: 70px;
+                }
+                .formcontrol {
+                  display: flex;
+                  .selectBasket {
+                    font-size: 12px;
+                    width: 60px;
+                    height: 30px;
+                  }
+                }
+              }
+              .centerAndRightSection {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                .centerSection {
+                  .button {
+                    display: flex;
+                    align-items: center;
+                    .btnleft {
+                      min-width: 10px;
+                    }
+                    .btnright {
+                      min-width: 10px;
+                    }
+                    p {
+                      border-bottom: 1px solid #8e8c8c;
+                      border-top: 1px solid #8e8c8c;
+                      width: 20px;
+                      text-align: center;
+                    }
+                    .quantityButton {
+                      height: 20px;
+                    }
+                  }
+                }
+                .rightSection {
+                  display: flex;
+                  align-items: center;
+                  p {
+                    font-size: 14px;
+                  }
+                }
+                .deleteBtn {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  margin: 10px 10px 0 0;
+                }
+              }
+            }
+          }
+        }
+        .totalPrice {
+          .priceText {
+            display: flex;
+            column-gap: 10px;
+          }
+          .sendmailbutton {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

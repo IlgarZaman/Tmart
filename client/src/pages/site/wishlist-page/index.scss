@@ -1,0 +1,342 @@
+#wishlistPage {
+  padding-top: 100px;
+  height: 100%;
+  background-color: white;
+  .headerForWishlit {
+    background-color: #f6f6f6;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      h2 {
+        color: #343434;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+      }
+      .link-title {
+        margin-top: 20px;
+        text-align: center;
+        a {
+          font-size: 18px;
+          color: #343434;
+        }
+        span {
+          font-size: 18px;
+          color: #343434;
+        }
+      }
+    }
+  }
+  .bodyForWishlist {
+    padding: 100px 0;
+    .container {
+      .shopBtnMobile {
+        display: none;
+      }
+      .ifEmptyWishlist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @keyframes bounce {
+          0%,
+          20%,
+          50%,
+          80%,
+          100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(-20px);
+          }
+          60% {
+            transform: translateY(-10px);
+          }
+        }
+
+        .emptyBox {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          animation: bounce 2s infinite;
+          background-image: url("../../../assets/empty-wishlist.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .message {
+          margin-top: 20px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+      .startShoppingDiv {
+        margin-top: 50px;
+        width: 100%;
+        height: 90px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .heartIconDiv {
+          width: 60px;
+          height: 60px;
+          background-color: #f7f8fa;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #e0e0e0;
+          border-radius: 50%;
+          .heartIcon {
+            @keyframes colorChange {
+              0%,
+              100% {
+                color: black;
+              }
+              50% {
+                color: #ff4136;
+              }
+            }
+            animation: colorChange 3s infinite;
+            font-size: 40px;
+          }
+        }
+        p {
+          margin-left: 9%;
+          color: #333;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .shopBtn {
+          color: #ff4136;
+          padding: 10px 20px;
+          &.MuiButton-outlined {
+            border-color: #bbb8b8;
+            &:hover {
+              border-color: #ff4136;
+            }
+
+            &.Mui-focused {
+              border-color: #ff4136;
+            }
+          }
+        }
+      }
+      .wishList {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .popUpClearWishlist {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          color: #343434;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 40px;
+        }
+        margin-bottom: 50px;
+      }
+      .cardContent {
+        .wishlistCardMainDiv {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 10px;
+          .css-1869usk-MuiFormControl-root {
+            min-width: 100px;
+          }
+          .css-1869usk-MuiFormControl-root {
+            margin: 8px 0;
+          }
+          .wishlistControl {
+            display: flex;
+            height: 40px;
+            width: 100px;
+            .wishListSelect {
+              display: flex;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .quantity {
+          display: flex;
+          .qunatityMainBtn {
+            display: flex;
+            align-items: center;
+            .quantityButton {
+              min-width: 30px;
+              height: 30px;
+            }
+            p {
+              border-bottom: 1px solid #8e8c8c;
+              border-top: 1px solid #8e8c8c;
+              width: 20px;
+              text-align: center;
+            }
+          }
+        }
+        .addToCartBtn {
+          margin-top: 5px;
+          display: flex;
+          justify-content: center;
+          button {
+            background: #333333 none repeat scroll 0 0;
+            color: #fff;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            width: 80%;
+            text-transform: capitalize;
+            transition: all 0.5s ease 0s;
+            border: none;
+            &:hover {
+              background-color: #ff4136;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #wishlistPage {
+    .bodyForWishlist {
+      .container {
+        .wishList {
+          grid-template-columns: repeat(3, 1fr);
+          .cartsBox {
+            .carts {
+              .cartHeader {
+                font-size: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #wishlistPage {
+    .headerForWishlit {
+      .container {
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+    .bodyForWishlist {
+      padding: 50px 0;
+      .container {
+        .wishList {
+          grid-template-columns: repeat(1, 1fr);
+          .cartsBox {
+            .carts {
+              .cartHeader {
+                font-size: 5px;
+              }
+            }
+          }
+        }
+
+        .ifEmptyWishlist {
+          .emptyBox {
+            width: 150px;
+            height: 150px;
+          }
+        }
+        .startShoppingMainDiv {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .startShoppingDiv {
+            width: 80%;
+            margin-top: 50px;
+            height: 90px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: initial;
+            .heartIconDiv {
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .heartIcon {
+                font-size: 24px;
+              }
+            }
+            p {
+              font-size: 10px;
+              font-weight: 600;
+            }
+          }
+          .shopBtn {
+            display: none;
+          }
+        }
+        .shopBtnMobDiv {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .shopBtnMobile {
+            display: block;
+            color: #ff4136;
+            &.MuiButton-outlined {
+              width: 80%;
+              border: 2px solid #343434;
+              border-color: #bbb8b8;
+              font-size: 10px;
+              &:hover {
+                border-color: #ff4136;
+              }
+
+              &.Mui-focused {
+                border-color: #ff4136;
+              }
+            }
+          }
+        }
+        .wishList {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1rem;
+        }
+        .popUpClearWishlist {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: space-between;
+          h2 {
+            color: #343434;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 40px;
+          }
+          margin-bottom: 20px;
+          .clearBtn {
+            width: 100%;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,390 @@
+#SixthSection {
+  background-color: white;
+  padding: 50px 0 120px;
+  .container {
+    width: 100%;
+    display: flex;
+    column-gap: 30px;
+    height: 600px;
+    .leftDiv {
+      width: 40%;
+      .leftImg {
+        height: 100%;
+        width: 100%;
+        background-image: url("/src/assets/leftimg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text {
+          padding: 40px;
+          float: inline-start;
+          position: absolute;
+          bottom: 0;
+          h4 {
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-variant-ligatures: common-ligatures;
+            a {
+              color: #000;
+              transition: all 0.3s ease-out 0s;
+              &:hover {
+                color: #ff4136;
+              }
+            }
+          }
+          .shopNowBtn {
+            color: #3a3a3a;
+            font-family: Dosis;
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 30px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+            &::before {
+              background: #000 none repeat scroll 0 0;
+              content: "";
+              height: 1px;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transition: all 0.5s ease 0s;
+              width: 20px;
+            }
+            &:hover {
+              color: #ff4136;
+            }
+            &:hover::before {
+              background: #ff4136 none repeat scroll 0 0;
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+    .rightDiv {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+
+      .topImg {
+        height: 50%;
+        width: 100%;
+        background-image: url("/src/assets/rightfirstimg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text {
+          padding: 40px;
+          float: inline-start;
+          position: absolute;
+          bottom: 0;
+          h4 {
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: capitalize;
+            font-variant-ligatures: common-ligatures;
+            a {
+              color: #000;
+              transition: all 0.3s ease-out 0s;
+              &:hover {
+                color: #ff4136;
+              }
+            }
+          }
+          .shopNowBtn {
+            color: #3a3a3a;
+            font-family: Dosis;
+            font-size: 16px;
+            font-weight: 500;
+            padding-right: 30px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.5s ease 0s;
+            &::before {
+              background: #000 none repeat scroll 0 0;
+              content: "";
+              height: 1px;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transition: all 0.5s ease 0s;
+              width: 20px;
+            }
+            &:hover {
+              color: #ff4136;
+            }
+            &:hover::before {
+              background: #ff4136 none repeat scroll 0 0;
+              width: 25px;
+            }
+          }
+        }
+      }
+      .bottomImg {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        column-gap: 30px;
+        .bottomLeftImg {
+          height: 100%;
+          width: 40%;
+          background-image: url("/src/assets/rightsecondimg.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          .text {
+            padding: 40px;
+            float: inline-start;
+            position: absolute;
+            bottom: 0;
+            h4 {
+              font-size: 22px;
+              font-weight: 400;
+              text-transform: capitalize;
+              font-variant-ligatures: common-ligatures;
+              a {
+                color: #000;
+                transition: all 0.3s ease-out 0s;
+                &:hover {
+                  color: #ff4136;
+                }
+              }
+            }
+            .shopNowBtn {
+              color: #3a3a3a;
+              font-family: Dosis;
+              font-size: 16px;
+              font-weight: 500;
+              padding-right: 30px;
+              position: relative;
+              text-transform: uppercase;
+              transition: all 0.5s ease 0s;
+              &::before {
+                background: #000 none repeat scroll 0 0;
+                content: "";
+                height: 1px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transition: all 0.5s ease 0s;
+                width: 20px;
+              }
+              &:hover {
+                color: #ff4136;
+              }
+              &:hover::before {
+                background: #ff4136 none repeat scroll 0 0;
+                width: 25px;
+              }
+            }
+          }
+        }
+        .bottomRightImg {
+          height: 100%;
+          width: 60%;
+          background-image: url("/src/assets/rightthirdimg.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          .text {
+            padding: 40px;
+            float: inline-start;
+            position: absolute;
+            bottom: 0;
+            h4 {
+              font-size: 22px;
+              font-weight: 400;
+              text-transform: capitalize;
+              font-variant-ligatures: common-ligatures;
+              a {
+                color: #000;
+                transition: all 0.3s ease-out 0s;
+                &:hover {
+                  color: #ff4136;
+                }
+              }
+            }
+            .shopNowBtn {
+              color: #3a3a3a;
+              font-family: Dosis;
+              font-size: 16px;
+              font-weight: 500;
+              padding-right: 30px;
+              position: relative;
+              text-transform: uppercase;
+              transition: all 0.5s ease 0s;
+              &::before {
+                background: #000 none repeat scroll 0 0;
+                content: "";
+                height: 1px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transition: all 0.5s ease 0s;
+                width: 20px;
+              }
+              &:hover {
+                color: #ff4136;
+              }
+              &:hover::before {
+                background: #ff4136 none repeat scroll 0 0;
+                width: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #SixthSection {
+    .container {
+      height: 400px;
+      column-gap: 20px;
+      .leftDiv {
+        width: 40%;
+        .leftImg {
+          .text {
+            padding: 20px;
+            h4 {
+              font-size: 16px;
+            }
+            .shopNowBtn {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .rightDiv {
+        row-gap: 20px;
+        .topImg {
+          .text {
+            padding: 20px;
+            top: 0;
+            h4 {
+              font-size: 16px;
+            }
+            .shopNowBtn {
+              font-size: 12px;
+            }
+          }
+        }
+        .bottomImg {
+          column-gap: 20px;
+          .bottomLeftImg {
+            .text {
+              padding: 20px;
+              h4 {
+                font-size: 16px;
+              }
+              .shopNowBtn {
+                font-size: 12px;
+              }
+            }
+          }
+          .bottomRightImg {
+            .text {
+              padding: 20px;
+              float: inline-start;
+              position: absolute;
+              bottom: 0;
+              h4 {
+                font-size: 16px;
+              }
+              .shopNowBtn {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #SixthSection {
+    background-color: white;
+
+    .container {
+      display: block;
+      height: 1200px;
+      .leftDiv {
+        width: 100%;
+        height: 360px;
+        margin-bottom: 30px;
+        .leftImg {
+          background-size: cover;
+          .text {
+            padding: 20px;
+            h4 {
+              font-size: 18px;
+            }
+            .shopNowBtn {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .rightDiv {
+        width: 100%;
+        display: block;
+        .topImg {
+          margin-bottom: 30px;
+          height: 150px;
+          width: 100%;
+          background-size: cover;
+          .text {
+            padding: 20px;
+            top: 0;
+            h4 {
+              font-size: 18px;
+            }
+            .shopNowBtn {
+              font-size: 12px;
+            }
+          }
+        }
+        .bottomImg {
+          height: 330px;
+          display: block;
+          column-gap: 30px;
+          .bottomLeftImg {
+            margin-bottom: 30px;
+            width: 100%;
+            background-size: cover;
+            .text {
+              padding: 30px;
+              h4 {
+                font-size: 18px;
+              }
+              .shopNowBtn {
+                font-size: 12px;
+              }
+            }
+          }
+          .bottomRightImg {
+            background-size: contain;
+            width: 100%;
+            position: relative;
+            .text {
+              padding: 20px;
+              top: 0;
+              h4 {
+                font-size: 18px;
+              }
+              .shopNowBtn {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

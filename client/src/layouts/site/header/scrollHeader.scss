@@ -1,0 +1,16 @@
+#scrolSiteHeader {
+  background: rgba(246, 246, 248, 0.9);
+  box-shadow: 0 0 15px #0000001a;
+  animation: slideDown 0.35s ease-out;
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  #scrolSiteHeader {
+    height: 75px;
+    padding-top: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #scrolSiteHeader {
+    background-color: #f7f7f7;
+  }
+}

@@ -1,0 +1,10 @@
+#uploadProductsForm {
+  .gridClass {
+    display: flex;
+    justify-content: space-around;
+    .redError {
+      color: red;
+      font-size: 13px;
+    }
+  }
+}
