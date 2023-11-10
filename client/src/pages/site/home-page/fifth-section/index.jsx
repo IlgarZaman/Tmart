@@ -125,8 +125,8 @@ const FifthSection = () => {
     setData(typeThree);
   };
   useEffect(() => {
-    setData(typeTwo);
-  }, [typeTwo]);
+    setData(typeFour);
+  }, [typeFour]);
 
   const addToWishList = async (e) => {
     try {
@@ -234,9 +234,7 @@ const FifthSection = () => {
                 <li>
                   <Link to={"#"}>
                     <div className="tab-menu-text" onClick={getTypeTwo}>
-                      <h4
-                        className={data[0]?.type === "bestsale" ? "active" : ""}
-                      >
+                      <h4 className={data[0]?.type === "latest" && "active"}>
                         top rated
                       </h4>
                     </div>
@@ -245,9 +243,7 @@ const FifthSection = () => {
                 <li>
                   <Link to={"#"}>
                     <div className="tab-menu-text" onClick={getTypeOne}>
-                      <h4
-                        className={data[0]?.type === "featured" ? "active" : ""}
-                      >
+                      <h4 className={data[0]?.type === "bestsale" && "active"}>
                         latest
                       </h4>
                     </div>
@@ -256,9 +252,7 @@ const FifthSection = () => {
                 <li>
                   <Link to={"#"}>
                     <div className="tab-menu-text" onClick={getTypeFour}>
-                      <h4
-                        className={data[0]?.type === "latest" ? "active" : ""}
-                      >
+                      <h4 className={data[0]?.type === "onsale" && "active"}>
                         best sale
                       </h4>
                     </div>
@@ -267,9 +261,7 @@ const FifthSection = () => {
                 <li>
                   <Link to={"#"}>
                     <div className="tab-menu-text" onClick={getTypeThree}>
-                      <h4
-                        className={data[0]?.type === "onsale" ? "active" : ""}
-                      >
+                      <h4 className={data[0]?.type === "featured" && "active"}>
                         up sale
                       </h4>
                     </div>
